@@ -33,6 +33,14 @@
 	color: #A9A9B0;
 }
 
+.text-14-black{
+	font-family: Helvetica;
+	font-size: 14px;
+	color: #3B3B3B;
+	letter-spacing: 0;
+	text-align: left;
+}
+
 .text-10-red{
 	font-family: Helvetica;
 	font-size: 10px;
@@ -67,6 +75,7 @@ body{
 
 .contain-index{
 	width: 90%;
+	max-width: 400px;
 	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
@@ -179,14 +188,15 @@ body{
 }
 
 /*主界面样式*/
-.contain-home{
+.contain-home{/*
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;*/
 	width: 90%;
 	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: scroll;
+	overflow: auto;
+	max-width: 400px;
 }
 
 .user-home{
@@ -223,6 +233,10 @@ body{
 .user-home{
 	margin-top: 30px;
 	margin-bottom: 35px;
+}
+
+.Recommended{
+	height: 490px;
 }
 
 .Recommended-head .text-20-black{
@@ -308,7 +322,6 @@ body{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 10px;
 }
 
 .select-button .button-active{
@@ -330,5 +343,90 @@ body{
 
 #Recommended-addcart{
 	background: #F34949;
+	color: #FFFFFF;
+}
+/*
+.menu{
+	margin-top: 40px;
+}*/
+
+.menu-content{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.menu-item{
+	width: 45%;
+	height: 50vw;
+	max-height: 200px;
+}
+
+.menu-item img{
+	width: 100%;
+	height: 41vw;
+	border-radius: 13px;
+}
+
+/*商品界面样式*/
+
+.contain-page{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-pic{
+	width: 100%;
+	height: 100vw;
+	max-height:400px;
+	box-sizing: border-box;
+}
+
+.page-text-flex{	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 434px;
+	padding-bottom: 10px;
+}
+
+.page-text{
+	overflow: auto;
+	width: 100%;
+	height: calc(100vh-100vw);
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.item-info-text{
+	line-height: 22px;
+}
+
+.page-pic img{
+	width: 100%;
+	height: 100%;
+	border-radius: 0 0 15px 15px;
+}
+
+#page-addcart{ 
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: Helvetica;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    background: #F34949;
 	color: #FFFFFF;
 }
