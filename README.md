@@ -19,3 +19,24 @@
 今日效果如下：
 
 ![](picOfProgress/secondday.png)
+
+
+**第四天**
+
+做了登陆界面的轮播动画以及Menu界面（其实是home界面下滑到指定区域时出现menu顶栏）
+
+小记：
+
+scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+z-index无效的情况：
+
+* 父标签 position属性为relative；
+
+* 问题标签无position属性（不包括static）；
+
+* 问题标签含有浮动(float)属性。
+
+今日效果如下：
+
+![](picOfProgress/fourthday.png)

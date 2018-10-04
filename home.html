@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div class="contain-home">
+		<a name="home"></a>
 		<div class="user-home">
 			<div class="home-address">
 				<div>
@@ -32,7 +33,7 @@
 					</p>
 				</div>
 				<div>
-					<a class="viewall-home" id="viewall-recommended" href="">View All</a>
+					<a class="viewall-home" id="viewall-recommended" href="#menu-all">View All</a>
 				</div>
 			</div>
 			<div class="Recommended-card">
@@ -67,6 +68,7 @@
 				</button>
 			</div>
 		</div>
+		<a name="menu-all"></a>
 		<div class="menu">
 			<div class="Recommended-head">
 				<div>
@@ -78,10 +80,54 @@
 					</p>
 				</div>
 				<div>
-					<a class="viewall-home" id="viewall-recommended" href="">View All</a>
+					<a class="viewall-home" id="viewall-recommended" href="#menu-all">View All</a>
 				</div>
 			</div>
+			<div class="hide menu-head" id="menu_Head">
+				<a href="#home"><img src="icon/arrowleft.png"></a>
+				<span class="text-20-black">Menu</span>
+			</div>
 			<div class="menu-content">
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
+				<div class="menu-item">
+					<img src="pic/MeatDelights.png">
+					<h1 class="text-14-black">Veg Pizza</h1>
+					<p class="text-12-gray">Starts from ₹199</p>
+				</div>
 				<div class="menu-item">
 					<img src="pic/MeatDelights.png">
 					<h1 class="text-14-black">Veg Pizza</h1>
@@ -95,5 +141,18 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var menuHead = document.getElementById('menu_Head')
+		window.addEventListener("scroll",function(e){
+			scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			if (scrollTop > 580) {
+				menuHead.classList.remove("hide");
+			}
+			else{
+				menuHead.classList.add("hide");
+			}
+		});
+	</script>
 </body>
 </html>

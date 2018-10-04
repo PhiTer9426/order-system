@@ -65,6 +65,11 @@
 body{
 	margin: 0;
 }
+
+.hide{
+	display: none !important;
+}
+
 /*登陆界面样式*/
 .contain-index,.slider-index,.member-index{
 	display: flex;
@@ -79,6 +84,7 @@ body{
 	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
 }
 
 .slider-index{
@@ -97,15 +103,23 @@ body{
 	text-align: center;
 }	
 
-.slider-pic{
-	width: 100%;
+#slider-pic{
+	/*position: relative;*/
+	width: 300%;
 	height: 70%;
+	/*transition: all 2s;*/
 }
 	
-.slider-pic img{
-	width: 100%;
+#slider-pic img{
+	/*float: left;*/
+	/*margin: 0;
+	border: 0;
+	padding: 0;*/
+	position: relative;
+	width: 33%;
 	height: 100%;
 	border-radius: 12px;
+	transition: transform 1s;
 }
 
 .slider-dot{
@@ -190,12 +204,12 @@ body{
 /*主界面样式*/
 .contain-home{/*
 	display: flex;
-	flex-direction: column;*/
+	flex-direction: column;
+	overflow: auto;*/
 	width: 90%;
 	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: auto;
 	max-width: 400px;
 }
 
@@ -358,15 +372,39 @@ body{
 	margin-top: 20px;
 }
 
+.menu-head{
+	height: 60px;
+	width: 100vw;
+	position: fixed;
+	background: white;
+	top: 0;
+	left: 0;
+}
+
+.menu-head span{
+	position: fixed;
+	top: 20px;
+	left: calc(50vw - 26px);
+}
+
+.menu-head img{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 20px;
+	height: 20px;
+}
+
 .menu-item{
 	width: 45%;
-	height: 50vw;
-	max-height: 200px;
+	height: 60vw;
+	max-height: 240px;
 }
 
 .menu-item img{
 	width: 100%;
 	height: 41vw;
+	max-height: 164px;
 	border-radius: 13px;
 }
 
