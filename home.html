@@ -87,53 +87,8 @@
 				<a href="#home"><img src="icon/arrowleft.png"></a>
 				<span class="text-20-black">Menu</span>
 			</div>
-			<div class="menu-content">
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
-					<img src="pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-				<div class="menu-item">
+			<div id="menu-contain" class="menu-content">
+				<div class="menu-item fade">
 					<img src="pic/MeatDelights.png">
 					<h1 class="text-14-black">Veg Pizza</h1>
 					<p class="text-12-gray">Starts from ₹199</p>
@@ -142,17 +97,91 @@
 		</div>
 	</div>
 	<script>
-		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 		var menuHead = document.getElementById('menu_Head')
-		window.addEventListener("scroll",function(e){
-			scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		var menuContain = document.getElementById('menu-contain')
+		var item_Data = [
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza2",
+				"price" : "Starts from ₹199"
+			},
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza3",
+				"price" : "Starts from ₹199"
+			},
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza4",
+				"price" : "Starts from ₹199"
+			},
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza5",
+				"price" : "Starts from ₹199"
+			},
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza6",
+				"price" : "Starts from ₹199"
+			},
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza7",
+				"price" : "Starts from ₹199"
+			},
+			{
+				"imgSrc" : "pic/MeatDelights.png",
+				"name" : "Veg Pizza8",
+				"price" : "Starts from ₹199"
+			}
+		];
+		var menuItemCount = 1;
+		window.addEventListener("scroll",function(){
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 			if (scrollTop > 580) {
 				menuHead.classList.remove("hide");
 			}
 			else{
 				menuHead.classList.add("hide");
 			}
+			if (checkLoad("menu-item")) {
+				if (menuItemCount < item_Data.length) {
+					var itemBox = document.createElement("div");
+					itemBox.className = "menu-item fade";
+					menuContain.appendChild(itemBox);
+
+					var itemImg = new Image();
+					itemImg.src = item_Data[menuItemCount].imgSrc;
+					itemBox.appendChild(itemImg);
+
+					var itemName = document.createElement("h1");
+					itemName.className = "text-14-black";
+					itemName.innerHTML = item_Data[menuItemCount].name;
+					itemBox.appendChild(itemName);
+
+					var itemPrice = document.createElement("p");
+					itemPrice.className = "text-12-gray";
+					itemPrice.innerHTML = item_Data[menuItemCount].price;
+					itemBox.appendChild(itemPrice);
+
+					menuItemCount++;
+				}
+			}
 		});
+		function checkLoad(className) {
+			// body...
+			var Items = document.getElementsByClassName(className);
+			var LastTop = Items[Items.length-1].offsetTop;
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var PageHeight = document.documentElement.clientHeight || document.body.clientHeight;
+			if (scrollTop + PageHeight > LastTop) {
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
 	</script>
 </body>
 </html>
