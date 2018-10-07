@@ -1,19 +1,3 @@
-@font-face {
-  font-family: 'iconfont';
-  src: url('iconfont.eot');
-  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-  url('iconfont.woff') format('woff'),
-  url('iconfont.ttf') format('truetype'),
-  url('iconfont.svg#iconfont') format('svg');
-}
-.iconfont{
-  font-family:"iconfont" !important;
-  font-size:16px;font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .text-20-black{
 	font-family: Helvetica;
 	font-size: 20px;
@@ -38,10 +22,9 @@
 	font-size: 14px;
 	color: #3B3B3B;
 	letter-spacing: 0;
-	text-align: left;
 }
 
-.text-10-red{
+.text-10-red, .button-active .text-10-gray{
 	font-family: Helvetica;
 	font-size: 10px;
 	color: #F34949;
@@ -211,6 +194,7 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 400px;
+	min-height: 200vh;
 }
 
 .user-home{
@@ -242,6 +226,11 @@ body{
 	color: #3B3B3B;
 	letter-spacing: 0;
 	margin-left: 5px;
+}
+
+.home-address img{
+	width: 20px;
+	height: 20px;
 }
 
 .user-home{
@@ -336,6 +325,7 @@ body{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	outline: none;
 }
 
 .select-button .button-active{
@@ -370,7 +360,6 @@ body{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-top: 20px;
-	min-height: 100vh;
 }
 
 .menu-head{
@@ -416,6 +405,14 @@ body{
 	height: 41vw;
 	max-height: 164px;
 	border-radius: 13px;
+}
+
+.menu-nomore{
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 20px;
+	color: #A9A9B0;
+	letter-spacing: 0;
 }
 
 /*商品界面样式*/

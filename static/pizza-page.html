@@ -8,7 +8,7 @@
 <body>
 	<div class="contain-page">
 		<div class="page-pic">
-			<img src="pic/pizza1.jpg">
+			<img src="../pic/pizza1.jpg">
 		</div>
 		<div class="page-text">
 			<div class="page-text-flex">
@@ -26,45 +26,45 @@
 				<div class="select-area">
 					<h1  class="text-14-black">Sizes</h1>
 					<div class="select-button">
-						<button class="button-active">
-							<span class="text-10-red">Medium</span>
+						<button class="button-active" onclick="ClickButton(0)">
+							<span class="text-10-gray">Medium</span>
 							<span class="text-10-black">₹450</span>
 						</button>
-						<button>
+						<button onclick="ClickButton(1)">
 							<span class="text-10-gray">Large</span>
 							<span class="text-10-black">₹990</span>
 						</button>
-						<button>
+						<button onclick="ClickButton(2)">
 							<span class="text-10-gray">Small</span>
 							<span class="text-10-black">₹199</span>
 						</button>
 					</div>
 					<h1  class="text-14-black">Crust</h1>
 					<div class="select-button">
-						<button class="button-active">
-							<span class="text-10-red">Standard</span>
+						<button class="button-active" onclick="ClickButton(3)">
+							<span class="text-10-gray">Standard</span>
 							<span class="text-10-black"></span>
 						</button>
-						<button>
+						<button onclick="ClickButton(4)">
 							<span class="text-10-gray">Garlic Roasted</span>
 							<span class="text-10-black">Free</span>
 						</button>
-						<button>
+						<button onclick="ClickButton(5)">
 							<span class="text-10-gray">Cheese Burst</span>
 							<span class="text-10-black">Free</span>
 						</button>
 					</div>
 					<h1  class="text-14-black">Toppings</h1>
 					<div class="select-button">
-						<button class="button-active">
-							<span class="text-10-red">Standard</span>
+						<button class="button-active" onclick="ClickButton(6)">
+							<span class="text-10-gray">Standard</span>
 							<span class="text-10-black"></span>
 						</button>
-						<button>
+						<button onclick="ClickButton(7)">
 							<span class="text-10-gray">Extra Cheese</span>
 							<span class="text-10-black">₹99</span>
 						</button>
-						<button>
+						<button onclick="ClickButton(8)">
 							<span class="text-10-gray">Extra Spice</span>
 							<span class="text-10-black">Free</span>
 						</button>
@@ -76,5 +76,23 @@
 			</div>	
 		</div>
 	</div>
+	<script>
+		var chose = [0,0,0]; 
+		var buttons = document.getElementsByTagName('button');
+		buttons = makeArray(buttons);
+		function ClickButton(n) {
+			// body...
+			buttons[3*Math.floor(n/3)+chose[Math.floor(n/3)]].classList.remove("button-active");
+			chose[Math.floor(n/3)]=n-3*Math.floor(n/3);
+			buttons[n].classList.add("button-active");
+		}
+		function makeArray(obj){ 
+	        var res = []; 
+    	    for(var i=0,len=obj.length; i<len; i++){
+        	   res.push(obj[i]); 
+       		} 
+      		return res; 
+  		}
+	</script>
 </body>
 </html>

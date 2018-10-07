@@ -11,7 +11,7 @@
 		<div class="user-home">
 			<div class="home-address">
 				<div>
-					<i class="iconfont">&#xe65d;</i>
+					<img src="../icon/address.png">
 					<span class="home-deli">DELIVERY</span>
 				</div>
 				<div>
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<div class="user-photo">
-				<img src="pic/head-pic.png">
+				<img src="../pic/head-pic.png">
 			</div>
 		</div>
 		<div class="Recommended">
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 			<div class="Recommended-card">
-				<img src="pic/SuperDeluxe.jpg">
+				<img src="../pic/SuperDeluxe.jpg">
 				<span class="text-18-black">Veggie Cheese Extravaganza</span>
 				<div class="Recommended-rate">
 					<span class="red-star">★</span>
@@ -48,7 +48,7 @@
 				</div>
 				<div class="select-button">
 					<button class="button-active">
-						<span class="text-10-red">Medium</span>
+						<span class="text-10-gray">Medium</span>
 						<span class="text-10-black">₹450</span>
 					</button>
 					<button>
@@ -84,58 +84,23 @@
 				</div>
 			</div>
 			<div class="hide menu-head" id="menu_Head">
-				<a href="#home"><img src="icon/arrowleft.png"></a>
+				<a href="#home"><img src="../icon/arrowleft.png"></a>
 				<span class="text-20-black">Menu</span>
 			</div>
 			<div id="menu-contain" class="menu-content">
 				<div class="menu-item fade">
-					<img src="pic/MeatDelights.png">
+					<img src="../pic/MeatDelights.png">
 					<h1 class="text-14-black">Veg Pizza</h1>
 					<p class="text-12-gray">Starts from ₹199</p>
 				</div>
 			</div>
+			<p class="menu-nomore">没有更多了</p>
 		</div>
 	</div>
 	<script>
-		var menuHead = document.getElementById('menu_Head')
-		var menuContain = document.getElementById('menu-contain')
-		var item_Data = [
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza2",
-				"price" : "Starts from ₹199"
-			},
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza3",
-				"price" : "Starts from ₹199"
-			},
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza4",
-				"price" : "Starts from ₹199"
-			},
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza5",
-				"price" : "Starts from ₹199"
-			},
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza6",
-				"price" : "Starts from ₹199"
-			},
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza7",
-				"price" : "Starts from ₹199"
-			},
-			{
-				"imgSrc" : "pic/MeatDelights.png",
-				"name" : "Veg Pizza8",
-				"price" : "Starts from ₹199"
-			}
-		];
+		var menuHead = document.getElementById('menu_Head');
+		var menuContain = document.getElementById('menu-contain');
+		var item_Data=[];
 		var menuItemCount = 1;
 		window.addEventListener("scroll",function(){
 			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -145,28 +110,27 @@
 			else{
 				menuHead.classList.add("hide");
 			}
-			if (checkLoad("menu-item")) {
-				if (menuItemCount < item_Data.length) {
-					var itemBox = document.createElement("div");
-					itemBox.className = "menu-item fade";
-					menuContain.appendChild(itemBox);
+			while (checkLoad("menu-item") && (menuItemCount < item_Data.length)) {
+				var itemBox = document.createElement("div");
+				itemBox.className = "menu-item fade";
+				menuContain.appendChild(itemBox);
 
-					var itemImg = new Image();
-					itemImg.src = item_Data[menuItemCount].imgSrc;
-					itemBox.appendChild(itemImg);
+				var itemImg = new Image();
+				itemImg.src = "../" + item_Data[menuItemCount].imgSrc;
+				itemBox.appendChild(itemImg);
 
-					var itemName = document.createElement("h1");
-					itemName.className = "text-14-black";
-					itemName.innerHTML = item_Data[menuItemCount].name;
-					itemBox.appendChild(itemName);
+				var itemName = document.createElement("h1");
+				itemName.className = "text-14-black";
+				itemName.innerHTML = item_Data[menuItemCount].name;
+				itemBox.appendChild(itemName);
 
-					var itemPrice = document.createElement("p");
-					itemPrice.className = "text-12-gray";
-					itemPrice.innerHTML = item_Data[menuItemCount].price;
-					itemBox.appendChild(itemPrice);
+				var itemPrice = document.createElement("p");
+				itemPrice.className = "text-12-gray";
+				itemPrice.innerHTML = item_Data[menuItemCount].price;
+				itemBox.appendChild(itemPrice);
 
-					menuItemCount++;
-				}
+				menuItemCount++;
+				console.log("scroll");
 			}
 		});
 		function checkLoad(className) {
@@ -182,6 +146,29 @@
 				return false;
 			}
 		}
+
+		function loadXMLDoc() {
+			var xmlhttp;
+			if (window.XMLHttpRequest)
+			{
+				xmlhttp=new XMLHttpRequest();
+			}
+			else
+			{
+				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+					item_Data = JSON.parse(xmlhttp.responseText);
+				}
+			}
+			xmlhttp.open("GET","../data/list.json",true);
+			xmlhttp.send();
+		}
+
+		loadXMLDoc();
 	</script>
 </body>
 </html>
