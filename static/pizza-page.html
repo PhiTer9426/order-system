@@ -1,98 +1,203 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="contain-page">
-		<div class="page-pic">
-			<img src="../pic/pizza1.jpg">
-		</div>
-		<div class="page-text">
-			<div class="page-text-flex">
-				<div class="item-info">
-					<h1 class="text-20-black">Paneer Pan Pizza</h1>
-					<div class="Recommended-rate">
-						<span class="red-star">★</span>
-						<span class="red-star">★</span>
-						<span class="red-star">★</span>
-						<span class="red-star">★</span>
-						<span class="gray-star">★</span>
+	<head>
+		<title>
+		</title>
+		<meta content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+			<link href="style.css" rel="stylesheet">
+			</link>
+		</meta>
+	</head>
+	<body>
+		<div class="contain-page">
+			<div class="page-pic">
+				<img src="">
+				</img>
+			</div>
+			<div class="page-text">
+				<div class="page-text-flex">
+					<div class="item-info">
+						<h1 class="text-20-black" id="j-item-name">
+						</h1>
+						<div class="Recommended-rate">
+							<span class="gray-star">
+								★
+							</span>
+							<span class="gray-star">
+								★
+							</span>
+							<span class="gray-star">
+								★
+							</span>
+							<span class="gray-star">
+								★
+							</span>
+							<span class="gray-star">
+								★
+							</span>
+						</div>
+						<p class="text-12-gray item-info-text" id="j-item-inf">
+						</p>
 					</div>
-					<p class="text-12-gray item-info-text">For a vegetarian looking for a BIG treat that goes easy on the spices, this one's got it all.. The onions, the capsicum, those delectable mushrooms - with paneer and golden corn to top it all.</p>
+					<div class="select-area">
+						<h1 class="text-14-black">
+							Sizes
+						</h1>
+						<div class="select-button">
+							<button class="button-active" onclick="ClickButton(0)">
+								<span class="text-10-gray">
+									Medium
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+							<button onclick="ClickButton(1)">
+								<span class="text-10-gray">
+									Large
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+							<button onclick="ClickButton(2)">
+								<span class="text-10-gray">
+									Small
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+						</div>
+						<h1 class="text-14-black">
+							Crust
+						</h1>
+						<div class="select-button">
+							<button class="button-active" onclick="ClickButton(3)">
+								<span class="text-10-gray">
+									Standard
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+							<button onclick="ClickButton(4)">
+								<span class="text-10-gray">
+									Garlic Roasted
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+							<button onclick="ClickButton(5)">
+								<span class="text-10-gray">
+									Cheese Burst
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+						</div>
+						<h1 class="text-14-black">
+							Toppings
+						</h1>
+						<div class="select-button">
+							<button class="button-active" onclick="ClickButton(6)">
+								<span class="text-10-gray">
+									Standard
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+							<button onclick="ClickButton(7)">
+								<span class="text-10-gray">
+									Extra Cheese
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+							<button onclick="ClickButton(8)">
+								<span class="text-10-gray">
+									Extra Spice
+								</span>
+								<span class="text-10-black">
+								</span>
+							</button>
+						</div>
+					</div>
+					<button id="page-addcart">
+						Add to Cart
+					</button>
 				</div>
-				<div class="select-area">
-					<h1  class="text-14-black">Sizes</h1>
-					<div class="select-button">
-						<button class="button-active" onclick="ClickButton(0)">
-							<span class="text-10-gray">Medium</span>
-							<span class="text-10-black">₹450</span>
-						</button>
-						<button onclick="ClickButton(1)">
-							<span class="text-10-gray">Large</span>
-							<span class="text-10-black">₹990</span>
-						</button>
-						<button onclick="ClickButton(2)">
-							<span class="text-10-gray">Small</span>
-							<span class="text-10-black">₹199</span>
-						</button>
-					</div>
-					<h1  class="text-14-black">Crust</h1>
-					<div class="select-button">
-						<button class="button-active" onclick="ClickButton(3)">
-							<span class="text-10-gray">Standard</span>
-							<span class="text-10-black"></span>
-						</button>
-						<button onclick="ClickButton(4)">
-							<span class="text-10-gray">Garlic Roasted</span>
-							<span class="text-10-black">Free</span>
-						</button>
-						<button onclick="ClickButton(5)">
-							<span class="text-10-gray">Cheese Burst</span>
-							<span class="text-10-black">Free</span>
-						</button>
-					</div>
-					<h1  class="text-14-black">Toppings</h1>
-					<div class="select-button">
-						<button class="button-active" onclick="ClickButton(6)">
-							<span class="text-10-gray">Standard</span>
-							<span class="text-10-black"></span>
-						</button>
-						<button onclick="ClickButton(7)">
-							<span class="text-10-gray">Extra Cheese</span>
-							<span class="text-10-black">₹99</span>
-						</button>
-						<button onclick="ClickButton(8)">
-							<span class="text-10-gray">Extra Spice</span>
-							<span class="text-10-black">Free</span>
-						</button>
-					</div>
-				</div>
-				<button id="page-addcart">
-					Add to Cart
-				</button>
-			</div>	
+			</div>
 		</div>
-	</div>
-	<script>
-		var chose = [0,0,0]; 
-		var buttons = document.getElementsByTagName('button');
-		buttons = makeArray(buttons);
-		function ClickButton(n) {
-			// body...
-			buttons[3*Math.floor(n/3)+chose[Math.floor(n/3)]].classList.remove("button-active");
-			chose[Math.floor(n/3)]=n-3*Math.floor(n/3);
-			buttons[n].classList.add("button-active");
-		}
-		function makeArray(obj){ 
-	        var res = []; 
-    	    for(var i=0,len=obj.length; i<len; i++){
-        	   res.push(obj[i]); 
-       		} 
-      		return res; 
-  		}
-	</script>
-</body>
+		<script>
+			var chose = [0,0,0]; 
+			var buttons = document.getElementsByTagName('button');
+			function ClickButton(n) {
+				// body...
+				buttons[3*Math.floor(n/3)+chose[Math.floor(n/3)]].classList.remove("button-active");
+				chose[Math.floor(n/3)]=n-3*Math.floor(n/3);
+				buttons[n].classList.add("button-active");
+			}
+			function GetQueryString (name) {
+				var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");//获取参数值的正则表达式
+				var urlKeys=window.location.search.substr(1);//获取url传参中？后面的值：id=123&name=小明
+				urlKeys=decodeURI(urlKeys);//针对中文乱码的解决方案；decodeURI()解决乱码问题
+				var r =urlKeys.match(reg);
+				window.console.log(r);//将r打印出来，我们发现r[2]是我们想要的结果
+				if(r!=null){
+					return  r[2];
+				}
+				else{
+					return null;
+				}
+			 }
+
+
+			var id = GetQueryString("id");
+			var item_Data;
+
+			function loadXMLDoc() {
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				{
+					xmlhttp=new XMLHttpRequest();
+				}
+				else
+				{
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange=function()
+				{
+					if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+						item_Data = JSON.parse(xmlhttp.responseText);
+						item_Data = item_Data[id];
+					}
+				}
+				xmlhttp.open("GET","../data/list.json",false);
+				xmlhttp.send();
+			}
+
+			function loadInf(){			
+				var stars = document.getElementsByClassName('gray-star');
+				for (var i = 0; i < item_Data.rate; i++) {
+					stars[i].classList.add("red-star");
+				}
+
+				document.getElementById('j-item-name').innerHTML = item_Data.name;
+
+				document.getElementById('j-item-inf').innerHTML = item_Data.brief;
+
+				document.getElementsByTagName('img')[0].src= "../"+item_Data.imgSrc;
+
+				var buttonText = document.getElementsByClassName('select-button');
+				buttonText[0].getElementsByClassName('text-10-black')[0].innerHTML=item_Data.priceOfSize1;
+				buttonText[0].getElementsByClassName('text-10-black')[1].innerHTML=item_Data.priceOfSize2;
+				buttonText[0].getElementsByClassName('text-10-black')[2].innerHTML=item_Data.priceOfSize3;
+				buttonText[1].getElementsByClassName('text-10-black')[1].innerHTML=item_Data.priceOfCrust1;
+				buttonText[1].getElementsByClassName('text-10-black')[2].innerHTML=item_Data.priceOfCrust2;
+				buttonText[2].getElementsByClassName('text-10-black')[1].innerHTML=item_Data.priceOfTop1;
+				buttonText[2].getElementsByClassName('text-10-black')[2].innerHTML=item_Data.priceOfTop2;
+			}
+
+			loadXMLDoc();
+			loadInf();
+		</script>
+	</body>
 </html>

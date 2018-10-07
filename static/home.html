@@ -1,174 +1,241 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="contain-home">
-		<a name="home"></a>
-		<div class="user-home">
-			<div class="home-address">
-				<div>
-					<img src="../icon/address.png">
-					<span class="home-deli">DELIVERY</span>
-				</div>
-				<div>
-					<span class="home-address-words">Wuhan Hubei</span>
-				</div>
-			</div>
-			<div class="user-photo">
-				<img src="../pic/head-pic.png">
-			</div>
-		</div>
-		<div class="Recommended">
-			<div class="Recommended-head">
-				<div>
-					<h1 class="text-20-black">
-						Recommended
-					</h1>
-					<p class="text-12-gray">
-						Based on your purchase history
-					</p>
-				</div>
-				<div>
-					<a class="viewall-home" id="viewall-recommended" href="#menu-all">View All</a>
-				</div>
-			</div>
-			<div class="Recommended-card">
-				<img src="../pic/SuperDeluxe.jpg">
-				<span class="text-18-black">Veggie Cheese Extravaganza</span>
-				<div class="Recommended-rate">
-					<span class="red-star">★</span>
-					<span class="red-star">★</span>
-					<span class="red-star">★</span>
-					<span class="red-star">★</span>
-					<span class="gray-star">★</span>
-				</div>
-				<div class="select-button">
-					<button class="button-active">
-						<span class="text-10-gray">Medium</span>
-						<span class="text-10-black">₹450</span>
-					</button>
-					<button>
-						<span class="text-10-gray">Large</span>
-						<span class="text-10-black">₹990</span>
-					</button>
-					<button>
-						<span class="text-10-gray">Small</span>
-						<span class="text-10-black">₹190</span>
-					</button>
-				</div>
-				<button id="Recommended-add">
-					Customize & Add
-				</button>
-				<button id="Recommended-addcart">
-					Add to Cart
-				</button>
-			</div>
-		</div>
-		<a name="menu-all"></a>
-		<div class="menu">
-			<div class="Recommended-head">
-				<div>
-					<h1 class="text-20-black">
-						Menu
-					</h1>
-					<p class="text-12-gray">
-						What’s on our menu
-					</p>
-				</div>
-				<div>
-					<a class="viewall-home" id="viewall-recommended" href="#menu-all">View All</a>
-				</div>
-			</div>
-			<div class="hide menu-head" id="menu_Head">
-				<a href="#home"><img src="../icon/arrowleft.png"></a>
-				<span class="text-20-black">Menu</span>
-			</div>
-			<div id="menu-contain" class="menu-content">
-				<div class="menu-item fade">
-					<img src="../pic/MeatDelights.png">
-					<h1 class="text-14-black">Veg Pizza</h1>
-					<p class="text-12-gray">Starts from ₹199</p>
-				</div>
-			</div>
-			<p class="menu-nomore">没有更多了</p>
-		</div>
-	</div>
-	<script>
-		var menuHead = document.getElementById('menu_Head');
-		var menuContain = document.getElementById('menu-contain');
-		var item_Data=[];
-		var menuItemCount = 1;
-		window.addEventListener("scroll",function(){
-			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-			if (scrollTop > 580) {
-				menuHead.classList.remove("hide");
-			}
-			else{
-				menuHead.classList.add("hide");
-			}
-			while (checkLoad("menu-item") && (menuItemCount < item_Data.length)) {
-				var itemBox = document.createElement("div");
-				itemBox.className = "menu-item fade";
-				menuContain.appendChild(itemBox);
+    <head>
+        <title>
+        </title>
+        <meta content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+            <link href="style.css" rel="stylesheet">
+            </link>
+        </meta>
+    </head>
+    <body>
+        <div class="contain-home">
+            <a name="home">
+            </a>
+            <div class="user-home">
+                <div class="home-address">
+                    <div>
+                        <img src="../icon/address.png">
+                            <span class="home-deli">
+                                DELIVERY
+                            </span>
+                        </img>
+                    </div>
+                    <div>
+                        <span class="home-address-words">
+                            Wuhan Hubei
+                        </span>
+                    </div>
+                </div>
+                <div class="user-photo">
+                    <img src="../pic/head-pic.png">
+                    </img>
+                </div>
+            </div>
+            <div class="Recommended">
+                <div class="Recommended-head">
+                    <div>
+                        <h1 class="text-20-black">
+                            Recommended
+                        </h1>
+                        <p class="text-12-gray">
+                            Based on your purchase history
+                        </p>
+                    </div>
+                    <div>
+                        <a class="viewall-home" href="#menu-all" id="viewall-recommended">
+                            View All
+                        </a>
+                    </div>
+                </div>
+                <div class="Recommended-card">
+                    <img src="../pic/SuperDeluxe.jpg">
+                        <span class="text-18-black">
+                            Veggie Cheese Extravaganza
+                        </span>
+                        <div class="Recommended-rate">
+                            <span class="red-star">
+                                ★
+                            </span>
+                            <span class="red-star">
+                                ★
+                            </span>
+                            <span class="red-star">
+                                ★
+                            </span>
+                            <span class="red-star">
+                                ★
+                            </span>
+                            <span class="gray-star">
+                                ★
+                            </span>
+                        </div>
+                        <div class="select-button">
+                            <button class="button-active" onclick="ClickButton(0)">
+                                <span class="text-10-gray">
+                                    Medium
+                                </span>
+                                <span class="text-10-black">
+                                    ₹450
+                                </span>
+                            </button>
+                            <button onclick="ClickButton(1)">
+                                <span class="text-10-gray">
+                                    Large
+                                </span>
+                                <span class="text-10-black">
+                                    ₹990
+                                </span>
+                            </button>
+                            <button onclick="ClickButton(2)">
+                                <span class="text-10-gray">
+                                    Small
+                                </span>
+                                <span class="text-10-black">
+                                    ₹190
+                                </span>
+                            </button>
+                        </div>
+                        <button id="Recommended-add">
+                            Customize & Add
+                        </button>
+                        <button id="Recommended-addcart">
+                            Add to Cart
+                        </button>
+                    </img>
+                </div>
+            </div>
+            <a name="menu-all">
+            </a>
+            <div class="menu">
+                <div class="Recommended-head">
+                    <div>
+                        <h1 class="text-20-black">
+                            Menu
+                        </h1>
+                        <p class="text-12-gray">
+                            What’s on our menu
+                        </p>
+                    </div>
+                    <div>
+                        <a class="viewall-home" href="#menu-all" id="viewall-recommended">
+                            View All
+                        </a>
+                    </div>
+                </div>
+                <div class="hide menu-head" id="menu_Head">
+                    <a href="#home">
+                        <img src="../icon/arrowleft.png"/>
+                    </a>
+                    <span class="text-20-black">
+                        Menu
+                    </span>
+                </div>
+                <div class="menu-content" id="menu-contain">
+                    <div class="menu-item fade">
+                        <a href="pizza-page.html?id=0">
+                            <img src="../pic/MeatDelights.png">
+                                <h1 class="text-14-black">
+                                    Veg Pizza
+                                </h1>
+                                <p class="text-12-gray">
+                                    Starts from ₹199
+                                </p>
+                            </img>
+                        </a>
+                    </div>
+                </div>
+                <p class="menu-nomore">
+                    没有更多了
+                </p>
+            </div>
+        </div>
+        <script>
+            var menuHead = document.getElementById('menu_Head');
+			var menuContain = document.getElementById('menu-contain');
+			var item_Data=[];
+			var menuItemCount = 1;
 
-				var itemImg = new Image();
-				itemImg.src = "../" + item_Data[menuItemCount].imgSrc;
-				itemBox.appendChild(itemImg);
+			var chose = 0;
+			var buttons = document.getElementsByTagName('button');
+			function ClickButton(n) {
+				// body...
+				buttons[chose].classList.remove("button-active");
+				chose=n;
+				buttons[n].classList.add("button-active");
+			}
 
-				var itemName = document.createElement("h1");
-				itemName.className = "text-14-black";
-				itemName.innerHTML = item_Data[menuItemCount].name;
-				itemBox.appendChild(itemName);
+			window.addEventListener("scroll",function(){
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				if (scrollTop > 580) {
+					menuHead.classList.remove("hide");
+				}
+				else{
+					menuHead.classList.add("hide");
+				}
+				while (checkLoad("menu-item") && (menuItemCount < item_Data.length)) {
+					var itemBox = document.createElement("div");
+					itemBox.className = "menu-item fade";
+					menuContain.appendChild(itemBox);
 
-				var itemPrice = document.createElement("p");
-				itemPrice.className = "text-12-gray";
-				itemPrice.innerHTML = item_Data[menuItemCount].price;
-				itemBox.appendChild(itemPrice);
+					var itemHref = document.createElement("a");
+					itemHref.href = "pizza-page.html?id="+ menuItemCount;
+					itemBox.appendChild(itemHref);
 
-				menuItemCount++;
-				console.log("scroll");
-			}
-		});
-		function checkLoad(className) {
-			// body...
-			var Items = document.getElementsByClassName(className);
-			var LastTop = Items[Items.length-1].offsetTop;
-			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-			var PageHeight = document.documentElement.clientHeight || document.body.clientHeight;
-			if (scrollTop + PageHeight > LastTop) {
-				return true;
-			}
-			else{
-				return false;
-			}
-		}
+					var itemImg = new Image();
+					itemImg.src = "../" + item_Data[menuItemCount].imgSrc;
+					itemHref.appendChild(itemImg);
 
-		function loadXMLDoc() {
-			var xmlhttp;
-			if (window.XMLHttpRequest)
-			{
-				xmlhttp=new XMLHttpRequest();
-			}
-			else
-			{
-				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			xmlhttp.onreadystatechange=function()
-			{
-				if (xmlhttp.readyState==4 && xmlhttp.status==200)
-				{
-					item_Data = JSON.parse(xmlhttp.responseText);
+					var itemName = document.createElement("h1");
+					itemName.className = "text-14-black";
+					itemName.innerHTML = item_Data[menuItemCount].name;
+					itemHref.appendChild(itemName);
+
+					var itemPrice = document.createElement("p");
+					itemPrice.className = "text-12-gray";
+					itemPrice.innerHTML = "start from" + item_Data[menuItemCount].priceOfSize3;
+					itemHref.appendChild(itemPrice);
+
+					menuItemCount++;
+					console.log("scroll");
+				}
+			});
+			function checkLoad(className) {
+				// body...
+				var Items = document.getElementsByClassName(className);
+				var LastTop = Items[Items.length-1].offsetTop;
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var PageHeight = document.documentElement.clientHeight || document.body.clientHeight;
+				if (scrollTop + PageHeight > LastTop) {
+					return true;
+				}
+				else{
+					return false;
 				}
 			}
-			xmlhttp.open("GET","../data/list.json",true);
-			xmlhttp.send();
-		}
 
-		loadXMLDoc();
-	</script>
-</body>
+			function loadXMLDoc() {
+				var xmlhttp;
+				if (window.XMLHttpRequest)
+				{
+					xmlhttp=new XMLHttpRequest();
+				}
+				else
+				{
+					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				xmlhttp.onreadystatechange=function()
+				{
+					if (xmlhttp.readyState==4 && xmlhttp.status==200)
+					{
+						item_Data = JSON.parse(xmlhttp.responseText);
+					}
+				}
+				xmlhttp.open("GET","../data/list.json",true);
+				xmlhttp.send();
+			}
+
+			loadXMLDoc();
+        </script>
+    </body>
 </html>

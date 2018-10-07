@@ -49,6 +49,10 @@ body{
 	margin: 0;
 }
 
+a{
+	text-decoration: none;
+}
+
 .hide{
 	display: none !important;
 }
@@ -333,7 +337,7 @@ body{
 }
 
 .Recommended-rate .red-star{
-	color: #F34949;
+	color: #F34949 !important;
 }
 
 .Recommended-rate .gray-star{

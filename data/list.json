@@ -1,57 +1,156 @@
 [
 {
+	"id" : "0",
 	"imgSrc" : "pic/MeatDelights.png",
 	"name" : "Veg Pizza2",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "1",
 	"imgSrc" : "pic/Burgers.png",
 	"name" : "Burgers",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "2",
 	"imgSrc" : "pic/Hotdogs.png",
 	"name" : "Hotdogs",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "3",
 	"imgSrc" : "pic/Fries.png",
 	"name" : "Fries",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "4",
 	"imgSrc" : "pic/MeatDelights.png",
 	"name" : "Veg Pizza6",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "5",
 	"imgSrc" : "pic/MeatDelights.png",
 	"name" : "Veg Pizza7",
-	"price" : "Starts from ₹199"
+	"rate" : "5",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "6",
 	"imgSrc" : "pic/MeatDelights.png",
 	"name" : "Veg Pizza2",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "7",
 	"imgSrc" : "pic/Burgers.png",
 	"name" : "Burgers",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "8",
 	"imgSrc" : "pic/Hotdogs.png",
 	"name" : "Hotdogs",
-	"price" : "Starts from ₹199"
+	"rate" : "5",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "9",
 	"imgSrc" : "pic/Fries.png",
 	"name" : "Fries",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 },
 {
+	"id" : "10",
 	"imgSrc" : "pic/MeatDelights.png",
 	"name" : "Veg Pizza8",
-	"price" : "Starts from ₹199"
+	"rate" : "4",
+	"brief" : "some words",
+	"priceOfSize1" : "₹450",
+	"priceOfSize2" : "₹990",
+	"priceOfSize3" : "₹199",
+	"priceOfCrust1" : "Free",
+	"priceOfCrust2" : "Free",
+	"priceOfTop1" : "₹99",
+	"priceOfTop2" : "Free"
 }
 ]
