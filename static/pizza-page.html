@@ -139,7 +139,7 @@
 				var urlKeys = window.location.search.substr(1);//获取url传参中？后面的值：id=123&name=小明
 				urlKeys = decodeURI(urlKeys);//针对中文乱码的解决方案；decodeURI()解决乱码问题
 				var r = urlKeys.match(reg);
-				window.console.log(r);//将r打印出来，我们发现r[2]是我们想要的结果
+				window.console.log(r);
 				if(r!=null){
 					return  r[2];
 				}
